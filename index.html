@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Age 計算機</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="align-self-center ">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        抓到等級 <input type="text" id="before_lv">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="before_hp">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="before_atk">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="before_def">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="before_dex">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        當前等級 <input type="text" id="after_lv">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="after_hp">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="after_atk">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="after_def">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="after_dex">
+                    </div>
+                </div>
+            </div>
+            <div class="row m-3">
+                <button type="button" class="btn btn-primary" id="commit">計算</button>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_1">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_1">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_1">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_1">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_1">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_2">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_2">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_2">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_2">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_2">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_3">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_3">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_3">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_3">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_3">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_4">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_4">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_4">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_4">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_4">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_5">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_5">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_5">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_5">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_5">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_6">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_6">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_6">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_6">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_6">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_7">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_7">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_7">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_7">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_7">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        預計等級 <input type="text" id="expected_lv_8">
+                    </div>
+                    <div>
+                        血量 <input type="text" id="expected_hp_8">
+                    </div>
+                    <div>
+                        攻擊 <input type="text" id="expected_atk_8">
+                    </div>
+                    <div>
+                        防禦 <input type="text" id="expected_def_8">
+                    </div>
+                    <div>
+                        敏捷 <input type="text" id="expected_dex_8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
