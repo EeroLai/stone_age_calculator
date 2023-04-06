@@ -31,11 +31,12 @@ $('#commit').on('click', function () {
     $('#expected_dex').val(grow_dex.toFixed(3));
 
     for (let i = 1; i <= 12; i++) {
-        $('#expected_lv_' + i).val(parseInt($('#after_lv').val()) + i);
-        $('#expected_hp_' + i).val(parseInt($('#after_hp').val()) + (grow_hp.toFixed(3) * i));
-        $('#expected_atk_' + i).val(parseInt($('#after_atk').val()) + (grow_atk.toFixed(3) * i));
-        $('#expected_def_' + i).val(parseInt($('#after_def').val()) + (grow_def.toFixed(3) * i));
-        $('#expected_dex_' + i).val(parseInt($('#after_dex').val()) + (grow_dex.toFixed(3) * i));
+        let n = (parseInt($('#n').val()) - parseInt($('#after_lv').val())) + i
+        $('#expected_lv_' + i).val(parseInt($('#n').val()) + i);
+        $('#expected_hp_' + i).val(parseInt($('#after_hp').val()) + (grow_hp.toFixed(3) * n));
+        $('#expected_atk_' + i).val(parseInt($('#after_atk').val()) + (grow_atk.toFixed(3) * n));
+        $('#expected_def_' + i).val(parseInt($('#after_def').val()) + (grow_def.toFixed(3) * n));
+        $('#expected_dex_' + i).val(parseInt($('#after_dex').val()) + (grow_dex.toFixed(3) * n));
     }
 });
 
