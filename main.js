@@ -25,8 +25,12 @@ $('#commit').on('click', function () {
     grow_atk = (afterObj.atk - beforeObj.atk) / sum_lv;
     grow_def = (afterObj.def - beforeObj.def) / sum_lv;
     grow_dex = (afterObj.dex - beforeObj.dex) / sum_lv;
+    $('#expected_hp').val(grow_hp);
+    $('#expected_atk').val(grow_atk);
+    $('#expected_def').val(grow_def);
+    $('#expected_dex').val(grow_dex);
 
-    for (let i = 1; i <= 8; i++) {
+    for (let i = 1; i <= 12; i++) {
         $('#expected_lv_' + i).val(parseInt($('#after_lv').val()) + i);
         $('#expected_hp_' + i).val(parseInt($('#after_hp').val()) + (grow_hp * i));
         $('#expected_atk_' + i).val(parseInt($('#after_atk').val()) + (grow_atk * i));
